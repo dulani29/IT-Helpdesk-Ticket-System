@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Service Desk: raise a support ticket, track your requests and search the knowledge base." />
+  <title>Help Desk — IT Service Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/portal.css" />
+</head>
+<body class="portal">
+  <header class="top"><div class="top-inner">
+    <a class="site" href="/">Help Desk</a>
+    <nav id="topNav"><a href="/login" id="loginLink">Login</a></nav>
+  </div></header>
+
+  <div class="crumbs"><div class="crumbs-inner"><a href="/">IT Service Desk</a><i>›</i><span>Help Desk</span></div></div>
+
+  <main class="wrap">
+    <h1 class="hello">Hello, how can we help?</h1>
+
+    <div class="search-band">
+      <form class="search-box" id="searchForm" role="search" autocomplete="off">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="Search for articles" aria-label="Search for articles" maxlength="100" />
+      </form>
+    </div>
+
+    <section class="info" aria-label="About this help desk">
+      <h2>IT Service Desk</h2>
+      <p>Having a problem with your laptop, network, software or account? Search the knowledge base for a quick fix, or submit a ticket right here and follow the replies from our support team.</p>
+      <hr>
+      <div class="cols">
+        <div><p>» <a href="/login">Administration panel</a></p><p>For support staff and administrators.</p></div>
+        <div><p>» <a href="/login">Customer login</a></p><p>Sign in to view and track your tickets.</p></div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <a class="action" id="submitCard" href="/login?next=%2Fapp%23new" role="button">
+        <span class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9 14h6"/></svg></span>
+        <span><b>Submit a ticket</b><small>Submit a new issue to the service desk</small></span>
+      </a>
+      <a class="action" id="viewCard" href="/track">
+        <span class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+        <span><b>View existing tickets</b><small>Customers: see and follow your tickets. Guests: look up with number and email</small></span>
+      </a>
+    </div>
+
+    <section aria-labelledby="kbTitle" id="kb">
+      <div class="kb-head">
+        <span class="badge lg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 5.5C4 4 7.5 4 12 6c4.5-2 8-2 10-.5V19c-2-1.5-5.500-1.500-10 .5-4.500-2-8-2-10-.5z"/><path d="M12 6v13.500"/></svg></span>
+        <h2 id="kbTitle" class="kb-title">Knowledgebase</h2>
+      </div>
+      <div class="kb-cats" id="kbList" aria-live="polite"><p class="kb-note">Loading articles…</p></div>
+    </section>
+
+    <p class="admin-link"><a href="/login">Go to Administration Panel</a></p>
+  </main>
+
+  <footer class="foot" id="companyFoot">IT Service Desk · Powered by the HelpDesk ticket system</footer>
+  <script src="/richtext.js"></script>
+  <script src="/company.js"></script>
+  <script src="/landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Knowledgebase article — Help Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/portal.css" />
+</head>
+<body class="portal">
+  <header class="top"><div class="top-inner">
+    <a class="site" href="/">Help Desk</a>
+    <nav><a href="/">Home</a><a href="/login">Login</a></nav>
+  </div></header>
+
+  <div class="crumbs"><div class="crumbs-inner" id="crumbs"><a href="/">IT Service Desk</a><i>›</i><a href="/">Help Desk</a><i>›</i><a href="/#kb">Knowledgebase</a><i>›</i><span id="crumbTitle">Loading…</span></div></div>
+
+  <div class="search-band">
+    <form class="search-box" id="searchForm" role="search" autocomplete="off">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="searchInput" type="search" placeholder="Search for articles" aria-label="Search for articles" maxlength="100" />
+    </form>
+  </div>
+
+  <main class="wrap art-wrap">
+    <div class="art-layout">
+      <article class="art-card" id="article" aria-live="polite"><p class="kb-note">Loading article…</p></article>
+      <aside class="art-side">
+        <section class="side-card" id="details" hidden>
+          <h3>Article Details</h3>
+          <dl class="art-details" id="detailList"></dl>
+          <p class="go-back"><a href="#" id="goBack"><span aria-hidden="true">⟵</span> Go back</a></p>
+        </section>
+        <section class="side-card" id="relatedBox" hidden>
+          <h3>Related articles</h3>
+          <ul class="related" id="relatedList"></ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="foot" id="companyFoot">IT Service Desk · Powered by the HelpDesk ticket system</footer>
+  <script src="/richtext.js"></script>
+  <script src="/company.js"></script>
+  <script src="/article.js"></script>
+</body>
+</html>

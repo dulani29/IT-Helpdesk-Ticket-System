@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Service Management & Infrastructure Support System" />
+  <title>Portal — IT Service Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Application -->
+  <div class="app-shell" id="appView" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard"><span class="brand-mark">H</span><span>Help<span class="brand-light">Desk</span></span></a>
+      <nav id="nav"></nav>
+      <div class="sidebar-bottom">
+        <button class="profile profile-btn" id="profileBtn" type="button" aria-haspopup="menu" aria-expanded="false"><div class="avatar" id="avatar"></div><div><strong id="profileName"></strong><small id="profileRole"></small></div><span class="caret" aria-hidden="true">▾</span></button>
+        <div class="profile-menu" id="profileMenu" role="menu" hidden>
+          <a href="#profile" role="menuitem">☺ Profile</a>
+          <a href="#settings" role="menuitem">⚙ Settings</a>
+          <button type="button" id="changePwd" role="menuitem">🔑 Change password</button>
+          <hr>
+          <a href="/" role="menuitem">⌂ Help desk home</a>
+          <button type="button" id="logoutBtn" role="menuitem">⏻ Sign out</button>
+        </div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div><p class="eyebrow" id="viewEyebrow">IT SERVICE MANAGEMENT</p><h1 id="viewTitle">Overview</h1></div>
+        <button class="primary-btn" id="openCreate"><span>＋</span> Create ticket</button>
+      </header>
+      <div id="view"></div>
+      <footer>HelpDesk <span>·</span> IT Service Management &amp; Infrastructure Support System</footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <section class="modal" id="modal" role="dialog" aria-modal="true"></section>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/richtext.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

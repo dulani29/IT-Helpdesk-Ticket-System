@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View ticket — IT Service Desk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/portal.css" />
+</head>
+<body class="portal">
+  <header class="top"><div class="top-inner">
+    <a class="site" href="/">Help Desk</a>
+    <nav><a href="/">Home</a><a href="/login">Login</a></nav>
+  </div></header>
+  <div class="crumbs"><div class="crumbs-inner"><a href="/">IT Service Desk</a><i>›</i><a href="/">Help Desk</a><i>›</i><span>View ticket</span></div></div>
+
+  <main class="wrap">
+    <div class="track-card">
+      <h1>View an existing ticket</h1>
+      <p class="sub" style="margin:0;color:#6b7f95">Enter the ticket number from your confirmation email and the email address the ticket was raised with. No sign-in needed.</p>
+      <form class="track-form" id="trackForm" novalidate>
+        <label>Ticket number<input name="ticket" placeholder="e.g. HD-0007 or 7" required autocomplete="off" maxlength="20" /></label>
+        <label>Email address<input name="email" type="email" placeholder="you@company.com" required autocomplete="email" maxlength="150" /></label>
+        <button class="btn" type="submit" id="trackBtn">View ticket</button>
+      </form>
+      <p class="err" id="trackError" role="alert" style="margin-top:12px"></p>
+      <div class="track-result" id="result" hidden></div>
+    </div>
+    <p class="login-back">Have an account? <a href="/login?next=%2Fapp%23tickets">Sign in</a> to see all your tickets and reply.</p>
+  </main>
+  <footer class="foot" id="companyFoot">IT Service Desk · Powered by the HelpDesk ticket system</footer>
+  <script src="/company.js"></script>
+  <script src="/track.js"></script>
+</body>
+</html>
