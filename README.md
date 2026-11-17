@@ -2,6 +2,9 @@
 
 A lightweight, web‑based ticketing system designed for internal IT support teams. It provides a simple interface for users to submit support requests, tracks ticket status, and enables administrators to manage, prioritize, and resolve issues efficiently.
 
+![employee portal](image-1.png)
+![help desk portal](image-2.png)
+
 ---
 
 ## ✨ Features
